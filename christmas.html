@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+            body{
+                background: pink;
+            }
+            p{
+                text-align: center;
+                font-family: Arial;
+                font-size: 60px;
+                font-weight:300;
+                margin-top: 200px;
+            }
+    </style>
+</head>
+<body>
+        <p>
+            <span>m</span>
+            <span>e</span>
+            <span>r</span>
+            <span>r</span>
+            <span>y</span>
+            <span>&nbsp;</span>
+            <span>c</span>
+            <span>h</span>
+            <span>r</span>
+            <span>i</span>
+            <span>s</span>
+            <span>t</span>
+            <span>m</span>
+            <span>a</span>
+            <span>s</span>
+            <span>!</span>
+        </p>
+        <script>
+            var spans = document.querySelectorAll("p span");
+            setInterval(function(){
+                [].forEach.call(spans,function(span){
+                    var color = '#'+Math.random().toString(16).slice(2,8);
+                    span.style.color = color;
+                    span.style.textShadow = `0px 1px 0px ${color},
+                                            0px 2px 0px ${color},
+                                            0px 3px 0px ${color},
+                                            0px 4px 0px ${color},
+                                            0px 5px 0px ${color},
+                                            0px 6px 0px ${color},
+                                            0px 7px 0px ${color}`;
+                });
+            },200);
+        </script>
+</body>
+</html>
